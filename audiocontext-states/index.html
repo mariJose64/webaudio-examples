@@ -89,7 +89,8 @@
     audioCtx.close().then(function() {
       startBtn.removeAttribute('disabled');
       susresBtn.setAttribute('disabled','disabled');
-      stopBtn.setAttribute('disabled','disabled');
+      susresBtn.textContent = 'Suspend context'; //this would ensure that 'susresBtn' button has this content, coming from a 'closed' state to a 'running' state once 'startBtn' is clicked
+      stopBtn.setAttribute('disabled','disabled');      
     });
   }
 
